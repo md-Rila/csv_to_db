@@ -32,9 +32,11 @@ def encrypt(text, s):
 #client = MongoClient("mongodb+srv://:<password>@grootan.6x7lq.mongodb.net/test")
 #mydb = client["test"] #database creation
 
-username = urllib.parse.quote_plus('rila')
-password = urllib.parse.quote_plus('ease786')
-client = MongoClient('mongodb://%s:%s@grootan.6x7lq.mongodb.net/test' % (username, password))
+#username = urllib.parse.quote_plus('rila')
+#password = urllib.parse.quote_plus('ease786')
+client = MongoClient('mongodb+srv://rila:ease786@grootan.6x7lq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mydb = client["mydb"]
+mycol = mydb["data"]
 
 #configuration
 st.set_option('deprecation.showfileUploaderEncoding',False)
